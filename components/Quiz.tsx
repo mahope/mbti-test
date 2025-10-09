@@ -43,7 +43,7 @@ export function Quiz({ onComplete, onRestart }: QuizProps) {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
+    <div className="w-full max-w-2xl mx-auto max-h-[calc(100vh-8rem)] overflow-y-auto">
       <Progress value={progress} className="mb-6" />
 
       <div className="bg-white rounded-2xl shadow-xl p-8">

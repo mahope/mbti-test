@@ -25,7 +25,7 @@ export function Result({ personalityType, onRestart }: ResultProps) {
   }
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
+    <div className="w-full max-w-2xl mx-auto max-h-[calc(100vh-8rem)] overflow-y-auto">
       <div className="bg-white rounded-2xl shadow-xl p-8">
         <div className="text-center mb-6">
           <div className="text-6xl mb-4">{personality.emoji}</div>
@@ -75,7 +75,7 @@ export function Result({ personalityType, onRestart }: ResultProps) {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-3">
+        <div className="flex flex-col sm:flex-row gap-3 mb-4">
           <button
             onClick={onRestart}
             className="flex-1 bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
@@ -96,6 +96,13 @@ export function Result({ personalityType, onRestart }: ResultProps) {
             Del resultat
           </button>
         </div>
+
+        <a
+          href="/typer"
+          className="block text-center text-indigo-600 hover:text-indigo-700 font-medium"
+        >
+          Se alle 16 personlighedstyper →
+        </a>
       </div>
 
       <div className="mt-6 text-center text-sm text-gray-600">
