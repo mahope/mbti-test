@@ -12,7 +12,7 @@ export const questions: Question[] = [
   // Extrovert (E) vs Introvert (I)
   {
     id: 1,
-    text: "På en fest, hvad foretrækker du?",
+    text: "Til en fest, hvad foretrækker du?",
     dimension: "EI",
     options: [
       { value: -2, label: "At være i centrum og snakke med mange" },
