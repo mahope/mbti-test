@@ -53,7 +53,7 @@ export default function Home() {
         </div>
       )}
 
-      {state === "quiz" && <Quiz onComplete={handleComplete} />}
+      {state === "quiz" && <Quiz onComplete={handleComplete} onRestart={handleRestart} />}
 
       {state === "result" && (
         <Result personalityType={personalityType} onRestart={handleRestart} />

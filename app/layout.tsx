@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "MBTI Personlighedstest - Spejderkursus",
@@ -13,8 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="da">
-      <body className="antialiased">
+      <body className="antialiased pb-16">
         {children}
+        <Footer />
       </body>
     </html>
   );

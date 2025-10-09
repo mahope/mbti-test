@@ -11,9 +11,10 @@ type Answer = {
 
 type QuizProps = {
   onComplete: (answers: Answer[]) => void;
+  onRestart: () => void;
 };
 
-export function Quiz({ onComplete }: QuizProps) {
+export function Quiz({ onComplete, onRestart }: QuizProps) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<Answer[]>([]);
 
@@ -46,8 +47,16 @@ export function Quiz({ onComplete }: QuizProps) {
       <Progress value={progress} className="mb-6" />
 
       <div className="bg-white rounded-2xl shadow-xl p-8">
-        <div className="mb-2 text-sm text-gray-500">
-          Spørgsmål {currentQuestion + 1} af {questions.length}
+        <div className="mb-2 flex justify-between items-center">
+          <span className="text-sm text-gray-500">
+            Spørgsmål {currentQuestion + 1} af {questions.length}
+          </span>
+          <button
+            onClick={onRestart}
+            className="text-sm text-red-600 hover:text-red-700 font-medium"
+          >
+            Start forfra
+          </button>
         </div>
 
         <h2 className="text-2xl font-bold mb-8 text-gray-800">
