@@ -1,7 +1,7 @@
 # Production image for the MBTI test (Next.js, `next start`).
 # Replaces the Nixpacks build, which pinned Node 20 via nixpacks.toml.
 
-FROM node:22.23.4-alpine
+FROM node:22.23.5-alpine
 
 RUN mkdir -p /app && chown node:node /app
 USER node
